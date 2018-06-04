@@ -144,11 +144,6 @@ module TE3270
         x_send_no_rsp "printtext(html,file,#{filename})"
       end
 
-      def screenhtml(filename)
-        File.delete(filename) if File.exists?(filename)
-        x_send_no_rsp "printtext(html,file,#{filename})"
-      end
-
       #
       # Returns the text of the active screen
       #
