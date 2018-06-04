@@ -138,6 +138,11 @@ module TE3270
         File.delete(filename) if File.exists?(filename)
         x_send_no_rsp "printtext(file,#{filename})"
       end
+      
+      def screenhtml(filename)
+        File.delete(filename) if File.exists?(filename)
+        x_send_no_rsp "printtext(html,file,#{filename})"
+      end
 
       def screenhtml(filename)
         File.delete(filename) if File.exists?(filename)
